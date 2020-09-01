@@ -1,4 +1,10 @@
 clc;clear all;
+
+%I calculated "Actual value" with this equation: 
+%E_p = K*Q(L/2)/(z*sqrt(z^2 + (L/2)^2)) 
+%from this source:
+%http://dev.physicslab.org/Document.aspx?doctype=3&filename=Electrostatics_ContinuousChargedRod.xml
+
 fprintf("Running... this takes about a minute to complete\n");
 n=250; %number of max iterations for loop
 j=2; %number of charges, starting with 2 (smallest number of charges you can have to approximate a line charge)
