@@ -1,0 +1,6 @@
+3.1: 4/5
+3.2: 5/5
+
+Total: 9/10
+
+Please meet with me in an office hour next week. I want to make sure that you understand 3.1 and there is not enough detail in your solutions to determine this.
