@@ -16,10 +16,10 @@ else
     for n=1:N
         if n~=N
             L=[abs(XYZ(n+1,1)-XYZ(n,1)),abs(XYZ(n+1,2)-XYZ(n,2)),abs(XYZ(n+1,3)-XYZ(n,3))]; %to calculate length of line segments
-            r0=[((XYZ(n+1,1)+XYZ(n,1)))./2,((XYZ(n+1,2)+XYZ(n,2)))./2,((XYZ(n+1,3)+XYZ(n,3)))./2]; %average of X value, 
+            r0=[((XYZ(n+1,1)+XYZ(n,1)))./2,((XYZ(n+1,2)+XYZ(n,2)))./2,((XYZ(n+1,3)+XYZ(n,3)))./2];
         else
-            L=[abs(XYZ(N,1)-XYZ(1,1)),abs(XYZ(N,2)-XYZ(1,2)),abs(XYZ(N,3)-XYZ(1,3))];
-            r0=[((XYZ(N,1)+XYZ(1,1)))./2,((XYZ(N,2)+XYZ(1,2)))./2,((XYZ(N,3)+XYZ(1,3)))./2]; %to calculate length of line segment at end of array
+            L=[abs(XYZ(N,1)-XYZ(1,1)),abs(XYZ(N,2)-XYZ(1,2)),abs(XYZ(N,3)-XYZ(1,3))]; %to calculate length of line segment at end of array
+            r0=[((XYZ(N,1)+XYZ(1,1)))./2,((XYZ(N,2)+XYZ(1,2)))./2,((XYZ(N,3)+XYZ(1,3)))./2]; 
         end
         r=sqrt(sum((r0.^2)));
         for i=1:3
