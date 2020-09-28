@@ -5,6 +5,11 @@ close all;
 p = [0, 0, 0];
 I = 1;
 
+% I would argue that this test is not really testing your Biot-Savart
+% calculation. In your function, you treat this as a special case and
+% use an analytic formula. In the limit that the length -> infinity,
+% the analytic approaches the Ampere's law solution. This is what you are
+% Actually testing here.
 XYZ = [1000, 1, 0; -1000,1,0];
 fprintf('\nCalculated B value of 1 line segment of very long length:\n');
 B = HW4_BiotSavart(p, XYZ, I)
@@ -14,6 +19,9 @@ u0=4*pi*10.^-7; %u0 value
 r=1;
 B = u0*I/(2*pi*r)
 
+
+% The following is a valid test of your code. If you had time, should
+% do a loop over n so repeated code not needed.
 n=4;
 r=1;
 XYZ=zeros(n,3);
@@ -81,6 +89,7 @@ fprintf('\nTable of B values for polygons of n number of sides\n');
 T = table(Sides,B)
 
 fprintf('Higher n sides produce a B value close to that of a circle.\n\nActual B value of a circle of r=1, I=1, z=0:\n');
+% Exact field at center of ring of radius r carrying current I.
 B = u0*I/(2*r)
 
 

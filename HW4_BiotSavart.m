@@ -4,6 +4,7 @@ u0=4*pi*10^-7; %u0 value
 B0=[0,0,0]; %to calculate magnetic field vector
 B=0;
 
+
 if N==2 %Calculates magnetic value if there is only 1 line segment- this is for HW4_Check
     L=[abs(XYZ(2,1)-XYZ(1,1)),abs(XYZ(2,2)-XYZ(1,2)),abs(XYZ(2,3)-XYZ(1,3))]; %to calculate length of line segments
     r0=[((XYZ(2,1)+XYZ(1,1))-p(1))./2,((XYZ(2,2)+XYZ(1,2))-p(2))./2,((XYZ(2,3)+XYZ(1,3))-p(3))./2];

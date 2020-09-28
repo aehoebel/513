@@ -19,6 +19,10 @@ f1 = B*pi*(r^2);
 p = [0, 0, 0];
 I = 1;
 B = HW4_BiotSavart(p, XYZ, I);
+
+% Need to indicate that you recognize that this is an approximation.
+% Flux is not simply the field at the center times the area. Need to
+% account for fact that field is not same over cross-section of ring.
 f2 = B*pi*(r^2);
 
 fprintf('\nCalculated flux of 2 rings at z=0 and z=2:\n');
@@ -34,9 +38,13 @@ u0=4*pi*10.^-7; %u0 value
 B2 = u0*I*(r.^2)./(2*((r.^2+z.^2).^(3/2)));
 f2 = B2*pi*(r^2);
 
+% This is an approximate answer that uses the flux at the center of the
+% ring. The field off-axis is not given by the above formulas for B.
 fprintf('\nFlux of 2 rings at z=0 and z=2 using ring equation:\n');
 F = f1+f2
 
+% Try to repeat copied code. This is not needed b/c you have it in
+% a separate file.
 function[BT] = HW4_BiotSavart(p, XYZ, I)
 N=size(XYZ,1); %how many line segments are there?
 u0=4*pi*10.^-7; %u0 value
